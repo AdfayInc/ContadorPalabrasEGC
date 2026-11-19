@@ -10,7 +10,7 @@ class ContadorPalabras(QtWidgets.QMainWindow):
         self.btnContar.clicked.connect(self.ContarPalabras)
     def ContarPalabras(self):
         #Recuperar texto✅
-        texto = self.edtCaracteres.text()
+        texto = self.edtCaracteres.toPlainText()
         #Separar las palabras✅
         textoSeparado = texto.split()
         print(textoSeparado)
@@ -22,8 +22,18 @@ class ContadorPalabras(QtWidgets.QMainWindow):
         for palabra in textoSeparado:
             totalCaracteres += len(palabra)
         totalCaracteres
-        self.tvCaracteres.setText(f"Palabras: {totalCaracteres}")
+        self.tvCaracteres.setText(f"Caracteres: {totalCaracteres}")
         
+        #Logica
+        if cantidadPalabras >=20:
+            self.tvPalabras.setStyleSheet("color: red;")
+        else: 
+            self.tvPalabras.setStyleSheet("color: black;")
+        if totalCaracteres >=120:
+            self.tvCaracteres.setStyleSheet("color: red;")
+        else: 
+            self.tvCaracteres.setStyleSheet("color: black;")
+            
 app = QtWidgets.QApplication(sys.argv)
 ventana = ContadorPalabras()
 ventana.show()

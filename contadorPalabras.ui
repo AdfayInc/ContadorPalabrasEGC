@@ -13,15 +13,27 @@
   <property name="windowTitle">
    <string>Contador de palabras</string>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>760</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>760</width>
+    <height>480</height>
+   </size>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
     <string notr="true">QWidget#centralwidget {
-    background-color: white;
+    background-color: #f7f7f7;
 }
 QLabel {
     color: black;
 }
-QLineEdit {
+QPlainTextEdit {
     background-color: white;
     color: black;
     border: 3px solid black;
@@ -41,17 +53,20 @@ QPushButton:pressed {
    <widget class="QLabel" name="lblTitulo">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>15</y>
+      <x>40</x>
+      <y>35</y>
       <width>680</width>
-      <height>95</height>
+      <height>70</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Patrick Hand</family>
-      <pointsize>58</pointsize>
+       <pointsize>48</pointsize>
      </font>
+    </property>
+    <property name="alignment">
+      <set>Qt::AlignCenter</set>
     </property>
     <property name="text">
      <string>Contador de palabras</string>
