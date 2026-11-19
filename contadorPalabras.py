@@ -15,10 +15,6 @@ class ContadorPalabras(QtWidgets.QMainWindow):
 
         textoLongitud = len(texto)
 
-        print(textoSeparado)
-
-        print(textoLongitud)
-
         self.tvPalabras.setText(f"Palabras: {textoSeparado}")
         self.tvCaracteres.setText(f"Caracteres: {textoLongitud}")
 
